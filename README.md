@@ -25,7 +25,6 @@ Use Case Queries
 The project includes a variety of SQL queries that demonstrate the system's capabilities:
 
 Retrieve Customers with the Highest Loan Amounts
-
 SELECT c.customer_id, c.customer_name, SUM(l.loan_amount) AS total_loan_amount
 FROM Customer c
 JOIN Account a ON c.customer_id = a.customer_id
@@ -33,8 +32,8 @@ JOIN Loan l ON a.account_id = l.account_id
 GROUP BY c.customer_id, c.customer_name
 ORDER BY total_loan_amount DESC
 LIMIT 5;
-Find Branches with the Most Accounts
 
+Find Branches with the Most Accounts
 SELECT br.branch_id, br.branch_name, COUNT(a.account_id) AS total_accounts
 FROM Branch br
 JOIN Banker b ON br.branch_id = b.branch_id
