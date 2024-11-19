@@ -109,17 +109,20 @@ JOIN Banker b ON br.branch_id = b.branch_id
 JOIN Account a ON b.account_id = a.account_id
 GROUP BY br.branch_id, br.branch_name;
 
-How to Use
+How to Use:
 Clone this repository and import the SQL script into your database system.
 Run the script to create the tables and insert sample data.
 Execute the use case queries to test the functionality and analyze the results.
-Notes
+
+Notes:
 Ensure to use the correct date functions depending on your SQL database system (e.g., GETDATE() for SQL Server, CURRENT_DATE for PostgreSQL).
 Adjust the LIMIT clause or use TOP for SQL Server queries if needed.
 The sample data provided is for testing purposes and can be modified to suit different scenarios.
-Tools Used
+
+Tools Used:
 Database Management System (DBMS): Please refer to the tools discussed in class, such as MySQL, SQL Server, or PostgreSQL.
-Future Enhancements
+
+Future Enhancements:
 Add more complex queries involving window functions.
 Implement stored procedures for common banking operations.
 Develop triggers for automated database actions.
